@@ -5,7 +5,7 @@ var BookingManager = {
     //Мы можем сконвертировать дату в любой нужный нам формат.
     setTimeout(function () {
       dfd.resolve('Hello, Habra!' + JSON.stringify(data));
-    });
+    }, 1000);
 
     return dfd.promise();
   }
