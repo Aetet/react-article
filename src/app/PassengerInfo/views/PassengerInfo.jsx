@@ -3,6 +3,12 @@
 */
 var React = require('react');
 var PassengerInfo = React.createClass({
+  propTypes: {
+    firstName: React.PropTypes.string,
+    lastName: React.PropTypes.string,
+    gender: React.PropTypes.string
+  },
+
   render: function () {
     return (
       <div>
