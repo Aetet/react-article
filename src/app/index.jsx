@@ -1,12 +1,13 @@
 /** @jsx React.DOM */
 
-var React = require('react');
+var React = require('react'),
+    Booking = require('root/Booking/views/Booking');
 
 var Index = React.createClass({
   render: function () {
     return (
       <div>
-        <div>Booking</div>
+        <Booking />
       </div>
     );
   }
