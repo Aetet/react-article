@@ -3,7 +3,9 @@
 */
 var React = require('react'),
     PassengerInfo = require('root/PassengerInfo/views/PassengerInfo'),
-    Submit = require('root/Submit/views/Submit');
+    Submit = require('root/Submit/views/Submit'),
+    clone = require('root/Common/utils/cloneObject'),
+    BookingManager = require('root/Booking/models/BookingManager');
 var Booking = React.createClass({
   getInitialState: function () {
     return {
@@ -16,8 +18,18 @@ var Booking = React.createClass({
   handleChange: function (name, value) {
     var state = {};
     state[name] = value;
-    console.log('name', name, 'value', value);
     this.setState(state);
+  },
+
+  handleSubmit: function () {
+    var dataForServer = clone(this.state);
+    BookingManager.saveData(dataForServer)
+      .then(function (successMsg) {
+        alert(successMsg);
+      })
+      .fail(function (err) {
+        console.log('err when save', err);
+      });
   },
 
   render: function () {
@@ -27,7 +39,7 @@ var Booking = React.createClass({
                        lastName={this.state.lastName}
                        gender={this.state.gender}
                        onChange={this.handleChange}/>
-        <Submit />
+        <Submit onSubmit={this.handleSubmit}/>
       </div>
     );
   }

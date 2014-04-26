@@ -11,7 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "react": "0.10.0",
-    "envify": "~1.2.1"
+    "envify": "~1.2.1",
+    "vow": "~0.4.3"
   },
   "devDependencies": {
     "connect": "2.14.4",
