@@ -5,8 +5,8 @@ var React = require('react');
 var Submit = React.createClass({
   render: function () {
     return (
-      <div>
-        <button>Submit</button>
+      <div className="form-actions">
+        <button className="btn btn-primary">Submit</button>
       </div>
     );
   }

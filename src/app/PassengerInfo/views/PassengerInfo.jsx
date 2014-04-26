@@ -6,18 +6,20 @@ var PassengerInfo = React.createClass({
   render: function () {
     return (
       <div>
-        <span className="field">
+        <span >
         <label>Имя</label>
         <input type="text" name="firstName" />
         </span>
-        <span className="field">
+        <span >
         <label>Фамилия</label>
         <input type="text" name="lastName" />
         </span>
-        <span className="field">
-          <span>M</span>
-          <span>F</span>
-        </span>
+        <div className="controls">
+          <span className="btn-group">
+            <span className="btn">M</span>
+            <span className="btn">F</span>
+          </span>
+        </div>
       </div>
     );
   }
