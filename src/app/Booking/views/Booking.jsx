@@ -7,17 +7,25 @@ var React = require('react'),
 var Booking = React.createClass({
   getInitialState: function () {
     return {
-      firstName: {},
+      firstName: '',
       lastName: '',
       gender: ''
     };
   },
+
+  handleChange: function (name, value) {
+    var state = {};
+    state[name] = value;
+    this.setState(state);
+  },
+
   render: function () {
     return (
       <div>
         <PassengerInfo firstName={this.state.firstName}
                        lastName={this.state.lastName}
-                       gender={this.state.gender} />
+                       gender={this.state.gender}
+                       onChange={this.handleChange}/>
         <Submit />
       </div>
     );

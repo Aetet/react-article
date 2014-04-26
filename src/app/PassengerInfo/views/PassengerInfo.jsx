@@ -9,16 +9,24 @@ var PassengerInfo = React.createClass({
     gender: React.PropTypes.string
   },
 
+  handleChange: function (e) {
+    var target = e.target,
+        name = target.name,
+        value = target.value;
+
+    this.props.onChange(name, value);
+  },
+
   render: function () {
     return (
       <div>
         <span >
         <label>Имя</label>
-        <input type="text" name="firstName" />
+        <input onChange={this.handleChange} type="text" name="firstName" />
         </span>
         <span >
         <label>Фамилия</label>
-        <input type="text" name="lastName" />
+        <input onChange={this.handleChange} type="text" name="lastName" />
         </span>
         <div className="controls">
           <span className="btn-group">
