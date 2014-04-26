@@ -1,0 +1,31 @@
+{
+  "name": "react-agenda",
+  "version": "0.0.1",
+  "description": "Agenda view built with React",
+  "keywords": [
+    "react",
+    "agenda",
+    "calendar"
+  ],
+  "author": "Aetet",
+  "license": "MIT",
+  "dependencies": {
+    "react": "0.10.0",
+    "envify": "~1.2.1"
+  },
+  "devDependencies": {
+    "connect": "2.14.4",
+    "event-stream": "3.1.1",
+    "gulp": "3.6.0",
+    "gulp-compass": "1.1.8",
+    "gulp-concat": "2.2.0",
+    "gulp-notify": "1.2.5",
+    "gulp-preprocess": "1.0.1",
+    "gulp-react": "0.3.1",
+    "gulp-stylus": "0.2.0",
+    "node-notifier": "2.0.4",
+    "webpack": "1.1.5",
+    "webpack-dev-server": "1.2.7",
+    "jsx-loader": "0.9.0"
+  }
+}
