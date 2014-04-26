@@ -2,7 +2,7 @@
 * @jsx React.DOM
 */
 var React = require('react'),
-    GenderSwitcher = require('root/Common/Widgets/GenderSwitcher/views/GenderSwitcher.jsx');
+    GenderSwitcher = require('root/Common/widgets/GenderSwitcher/views/GenderSwitcher.jsx');
 var PassengerInfo = React.createClass({
   propTypes: {
     firstName: React.PropTypes.string,
@@ -27,14 +27,20 @@ var PassengerInfo = React.createClass({
       <div>
         <span >
         <label>Имя</label>
-        <input onChange={this.handleChange} type="text" name="firstName" />
+        <input onChange={this.handleChange} 
+               type="text" 
+               name="firstName" 
+               value={this.props.firstName} />
         </span>
         <span >
         <label>Фамилия</label>
-        <input onChange={this.handleChange} type="text" name="lastName" />
+        <input onChange={this.handleChange} 
+               type="text" name="lastName" 
+               value={this.props.lastName} />
         </span>
         <div className="controls">
-          <GenderSwitcher onChange={this.handleGender} />
+          <GenderSwitcher onChange={this.handleGender} 
+                          gender={this.props.gender} />
         </div>
       </div>
     );
