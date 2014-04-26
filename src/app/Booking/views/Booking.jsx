@@ -16,6 +16,7 @@ var Booking = React.createClass({
   handleChange: function (name, value) {
     var state = {};
     state[name] = value;
+    console.log('name', name, 'value', value);
     this.setState(state);
   },
 
