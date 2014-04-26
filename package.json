@@ -1,11 +1,12 @@
 {
-  "name": "react-agenda",
+  "name": "react-article",
   "version": "0.0.1",
-  "description": "Agenda view built with React",
+  "description": "Hello, Habrahabr",
   "keywords": [
     "react",
-    "agenda",
-    "calendar"
+    "article",
+    "habrahabr",
+    "cakeisalie"
   ],
   "author": "Aetet",
   "license": "MIT",
