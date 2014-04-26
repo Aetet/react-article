@@ -16,8 +16,8 @@ var PassengerInfo = React.createClass({
         </span>
         <div className="controls">
           <span className="btn-group">
-            <span className="btn">M</span>
-            <span className="btn">F</span>
+            <span className="btn">М</span>
+            <span className="btn">Ж</span>
           </span>
         </div>
       </div>
